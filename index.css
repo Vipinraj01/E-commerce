@@ -15,7 +15,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 4;
     background-color: #f2f4f7;
 }
 
@@ -62,7 +62,10 @@ body {
     color: white; 
     transition: 0.3s; 
     display: block; 
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    font-size: 20px; 
+    border-bottom: 2px solid;
+    padding: 5px;
 }
 
 /* Hover effect for links */
@@ -83,7 +86,7 @@ body {
     right: 10px;
     cursor: pointer;
     color: white;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 
@@ -91,6 +94,9 @@ body {
     color: #ff8c00; 
 }
 
+.side-navbar-links{
+    margin-top: 30px;
+}
 
 .header {
     display: flex;
@@ -145,7 +151,18 @@ body {
 .new-arrival-container {
     position: relative;
     flex-basis: 20%;
+    overflow: hidden;  
 }
+.new-arrival-container img{
+    object-fit: cover;
+    width: 100%;
+    transition: transform .5s ease-in-out;
+}
+
+.new-arrival-container:hover img {
+    transform: scale(1.1); 
+}
+
 
 .new-arrival button {
     padding-left: 10%;
@@ -183,9 +200,15 @@ body {
     border-radius: 10px;
     padding: 10px;
     border: none;
-
-
 }
+.product-box img{
+    transition: transform .5s ease-in-out;
+    border-radius: 10px;
+}
+.product-box:hover img{ 
+    transform: scale(1.1); 
+}
+
 
 .footer {
     margin-top: 20px;
@@ -310,6 +333,7 @@ label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 input[type="text"],
