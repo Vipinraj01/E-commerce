@@ -283,9 +283,7 @@ body {
     border-radius: 10px;
 }
 
-i{
-    font-size: 30px;
-}
+
 
 
 
@@ -459,6 +457,10 @@ button[type="submit"]:hover {
 
     .footer-icon-container i {
         margin-top: 0; /* Remove margin from footer icons */
+    }
+
+    i{
+        font-size: 30px;
     }
 }
 
