@@ -70,7 +70,7 @@ body {
 
 /* Hover effect for links */
 .side-navbar a:hover {
-    text-decoration: underline; 
+    text-decoration: none; 
     color: #ff8c00; 
 }
 
@@ -144,7 +144,8 @@ body {
 
 .new-arrival {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -165,18 +166,20 @@ body {
 
 
 .new-arrival button {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+   padding: 15px;
     margin-top: 10px;
     color: #102324;
     position: absolute;
-    top: 60%;
-    left: 18%;
+    top: 65%;
+    left: 30%;
     border-radius: 10px;
     border: none;
+    display: flex;
+    gap: 5px;
+}
 
+.new-arrival button i{
+    font-size: 15px;
 }
 
 .news {
@@ -280,6 +283,10 @@ body {
     border-radius: 10px;
 }
 
+i{
+    font-size: 30px;
+}
+
 
 
 
@@ -361,8 +368,7 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 700px) {
     .product {
         width: 90%; 
     }
@@ -385,23 +391,74 @@ button[type="submit"]:hover {
         display: none;
     }
 
-    .service-container-1 {
-        display: none;
-    }
-
+    .service-container-1,
     .service-container-2 {
-        flex-direction: column;
+        display: none; /* Hide both service containers on smaller screens */
     }
-
 
     .Name-bar{
         margin: 25px;
         margin-top: 100px;
         
-        
+    }
+    .new-arrival {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
+/* For screens smaller than 700px */
+@media only screen and (max-width: 700px) {
+    .navbar-links {
+        display: none; /* Hide the navbar links */
+    }
 
+    .navbar-menu-toggle {
+        display: block; /* Show the menu toggle button */
+    }
 
+    .header {
+        flex-direction: column; /* Stack header items vertically */
+        gap: 20px; /* Add some space between header items */
+        text-align: center; /* Center-align header text */
+    }
+
+    .header-button {
+        margin-top: 20px; /* Add some space below header text */
+    }
+
+    .service-container-1,
+    .service-container-2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px; /* Hide service containers on smaller screens */
+    }
+
+    .new-arrival button {
+        padding: 15px;
+         margin-top: 10px;
+         color: #102324;
+         position: absolute;
+         top: 55%;
+         left: 25%;
+         border-radius: 10px;
+         border: none;
+         display: flex;
+         gap: 5px;
+     }
+
+     .navbar-links a:hover {
+        text-decoration: none;
+
+    }
+
+    .new-arrival-container {
+        flex-basis: 45%; /* Adjust width of new arrival items */
+    }
+
+    .footer-icon-container i {
+        margin-top: 0; /* Remove margin from footer icons */
+    }
+}
 
